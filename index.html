@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>Bolger - Prototype</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="images/logo.png" class="logo">
+                <!-- Adding nav links to required img tags -->
+                <nav>
+                    <!-- creating and id for use of the menu in mobile screens -->
+                    <ul id="menuclick">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </nav>
+                <!-- on clicking the menu icon on mobile screens the toggle will happen -->
+                <img src="images/menu.png" class="menu" onclick="togglemenu()">
+            </div>
+
+            <div class="row">
+                <!-- webpage content added -->
+                <div class="col-1">
+                    <h2>BOLGER</h2>
+                    <h3>Fuel yourself with the best</h3>
+                    <p>(Not sponsored by Gorilla Mind)</p>
+                    <h4>The best supplements, the best prices.</h4>
+                    <!-- adding button to be styled -->
+                    <a href="https://gorillamind.com/products/gorilla-mode-energy">
+                    <button type="button">PLACE YOUR ORDER NOW<img src="images/check.png"></button>
+                    </a>
+                </div>
+                <div class="col-2"></div>
+                    <img src="images/preworkout.png" class="preworkout">
+                    <div class="color-box"></div>
+                    <div class="add-btn">
+                        <a href="https://gorillamind.com">
+                        <img src="images/add.png">
+                        </a>
+                        <p><small>FIND MORE PRODUCTS!</small></p>
+                    </div>
+            </div>
+
+            <!-- Links to websites should work when clicked on. -->
+            <div class="social-links">
+                <a href="https://www.facebook.com">
+                <img src="images/fb.png">
+                </a>
+                <a href="https://www.instagram.com">
+                <img src="images/ig.png">
+                </a>
+                <a href="https://www.twitter.com">
+                <img src="images/tw.png">
+                </a>
+            </div>
+
+        </div>
+<!-- Might be buggy - added script for the list that will be available in mobile screens. -->
+        <script>
+
+            var menuclick = document.getElementById("menuclick");
+
+            menuclick.style.maxHeight = "0px";
+
+            function togglemenu(){
+
+                if(menuclick.style.maxHeight == "0px")
+                {
+
+                    menuclick.style.maxHeight = "170px";
+
+                }
+                else{
+
+                    menuclick.style.maxHeight = "0px";
+
+                }
+
+            }
+
+        </script>
+            <!-- woohoo! got it to work! lol -->
+    </body>
+</html>
